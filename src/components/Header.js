@@ -12,15 +12,17 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     position: "absolute",
-    padding: theme.spacing(6),
+    padding: theme.spacing(6, 8),
+    transform: "scale(1.5)",
   },
   container: {
     margin: 0,
     padding: 0,
     overflow: "hidden",
+    background: "white",
   },
   textContainer: {
-    padding: theme.spacing(16, 10),
+    padding: theme.spacing(16, 10, 0, 10),
     background: "white",
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(6, 4),
@@ -40,7 +42,11 @@ const useStyles = makeStyles((theme) => ({
     background: "white",
     borderRadius: 0,
     fontSize: "24px",
-    fontWeight: "100",
+  },
+  btnText: {
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 400,
+    marginLeft: "-6px",
   },
 }));
 
@@ -76,7 +82,7 @@ const Header = () => {
             </Typography>
             <button className={classes.btn}>
               {/* prettier-ignore */}
-              <pre>S H O P   N O W<img src={arrow} style={{marginLeft: '32px'}}/></pre>
+              <pre className={classes.btnText}>S H O P   N O W<img src={arrow} style={{marginLeft: '32px'}}/></pre>
             </button>
           </Grid>
         </Grid>
